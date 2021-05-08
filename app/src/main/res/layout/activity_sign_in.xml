@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:scrollbars = "none"
+    android:background="@color/colorPrimary"
+    tools:context=".Activity.SignInActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:layout_margin="16dp"
+            app:cardCornerRadius="10dp"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/logInTypeTv"
+                    android:text="Select Log In Type"
+                    android:layout_margin="16dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_margin="16dp"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_margin="16dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/teacher_2"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"/>
+                    <Button
+                        android:id="@+id/teacherBtn"
+                        android:text="Sign in as teacher"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:padding="8dp"
+                        android:onClick="teacherSignIn"
+                        android:layout_gravity="center"
+                        android:background="@drawable/circular_background_button"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_margin="16dp"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_margin="16dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/students"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"/>
+                    <Button
+                        android:id="@+id/studentBtn"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:padding="8dp"
+                        android:onClick="studentSignIn"
+                        android:text="Sign in as student"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center"
+                        android:background="@drawable/circular_background_button"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/signUpLayout"
+                    android:onClick="signUp"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/otherTv"
+                        android:text="Don't have an account?"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginLeft="8dp"
+                        android:text="Sign Up"
+                        android:id="@+id/signUpTv"
+                        android:layout_toRightOf="@id/otherTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+</ScrollView>

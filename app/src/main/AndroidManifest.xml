@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.app.departmentinfos">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:requestLegacyExternalStorage="true"
+        android:allowBackup="true"
+        android:icon="@drawable/graduated"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/graduated"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DepartmentInfos">
+        <activity android:name=".Activity.UserMessagesActivity"></activity>
+        <activity android:name=".Activity.ForumDetailActivity"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name=".Activity.Student.FacultyActivity" />
+        <activity android:name=".Activity.Teacher.RequestActivity" />
+        <activity android:name=".Activity.ProfileSettingsActivity" />
+        <activity android:name=".Activity.MessageActivity" />
+        <activity android:name=".Activity.ForumActivity"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name=".Activity.AssignmentActivity"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name=".Activity.NoticeActivity"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name=".Activity.CourseActivity"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name=".Activity.Teacher.TeacherActivity" />
+        <activity android:name=".Activity.Student.StudentActivity" />
+        <activity android:name=".Activity.SignInActivity"
+            android:configChanges="orientation|screenSize"
+            />
+        <activity android:name=".Activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.com.vansuita.pickimage.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/picker_provider_paths" />
+        </provider>
+    </application>
+
+
+</manifest>
